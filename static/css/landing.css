@@ -1,0 +1,237 @@
+/* ------------------------------------------------------------------ */
+/* Hero — dark edition (landing page only)                             */
+/* ------------------------------------------------------------------ */
+
+.hero {
+    background: #252525;
+    max-width: 100%;
+    margin: 0;
+    padding: 5rem 5vw;
+    min-height: calc(100vh - 60px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-title {
+    font-family: var(--font-body);
+    font-size: clamp(2rem, 3.2vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+    font-size: 1.05rem;
+    color: #a0a0a0;
+    line-height: 1.7;
+    max-width: 460px;
+    margin-bottom: 2.5rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Get Started button */
+.btn-hero-primary {
+    display: inline-block;
+    background: #b9f23c;
+    color: #111111;
+    padding: 0.8rem 1.75rem;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.btn-hero-primary:hover { background: #caff52; }
+
+/* Showreel button */
+.btn-hero-showreel {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    background: transparent;
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid #444;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: border-color 0.2s;
+}
+
+.btn-hero-showreel:hover { border-color: #888; }
+
+.showreel-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%;
+    border: 1px solid #666;
+    font-size: 0.45rem;
+    color: #ffffff;
+    flex-shrink: 0;
+    padding-left: 2px; /* optical centering of play triangle */
+}
+
+/* Brand logos */
+.hero-brands {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 3.5rem;
+}
+
+.brand-logo {
+    color: #444;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.brand-visa {
+    font-size: 1.25rem;
+    font-style: italic;
+    letter-spacing: 0.08em;
+}
+
+.brand-techstars {
+    font-family: monospace;
+    letter-spacing: -0.01em;
+}
+
+.brand-forbes {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    text-transform: none;
+    font-weight: 400;
+}
+
+/* Mock card — dark theme */
+.hero .mock-card {
+    background: #1c1c1c;
+    border-color: #333;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+}
+
+.hero .mock-card-header {
+    border-bottom-color: #333;
+}
+
+.hero .mock-label { color: #666; }
+.hero .mock-total { color: #ffffff; }
+
+/* Vertical bar chart */
+.chart-wrap {
+    padding: 0.5rem 0 0.25rem;
+}
+
+.chart-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+    height: 130px;
+}
+
+.chart-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.35rem;
+    height: 100%;
+}
+
+.chart-bar {
+    width: 100%;
+    background: #2e2e2e;
+    border-radius: 4px 4px 0 0;
+    transition: height 0.6s ease;
+}
+
+.chart-bar-hi {
+    background: #b9f23c;
+}
+
+.chart-day {
+    font-size: 0.62rem;
+    color: #555;
+    letter-spacing: 0.03em;
+}
+
+.chart-tip {
+    font-size: 0.62rem;
+    font-weight: 600;
+    color: #b9f23c;
+    white-space: nowrap;
+    margin-bottom: -0.1rem;
+}
+
+/* Category legend below chart */
+.mock-legend {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    border-top: 1px solid #2a2a2a;
+    padding-top: 1rem;
+}
+
+.mock-legend-row {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.legend-cat {
+    flex: 1;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.legend-amt {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #ccc;
+}
+
+/* ------------------------------------------------------------------ */
+/* Responsive                                                          */
+/* ------------------------------------------------------------------ */
+
+@media (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 3rem 1.5rem;
+        min-height: auto;
+        text-align: center;
+    }
+
+    .hero-subtitle { max-width: 100%; }
+    .hero-actions  { justify-content: center; }
+    .hero-brands   { justify-content: center; }
+    .hero-visual   { display: none; }
+}
